@@ -85,3 +85,11 @@ Para el almacenamiento de datos locales se pueden usar varias estrategias, sin e
 <img src="http://gabo.com.co/pdam/lab-9/lab-09-05.png" width="50%">
 
 * Pruebe el funcionamiento de la navegación de la aplicación corriendo el proyecto.
+
+* Cree una clase nueva para almacenar la lógica de creación del Todo (TodoDetailViewController) y como en puntos anteriores vinculela a la interfaz que se creó en puntos anteriores.
+
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-06.png" width="50%">
+
+* Ahora vincularemos la logica con la acción del botón de guardar, esto se hará usando la vista contextual y teniendo seleccionado el botón se arrastrará hasta la vista en donde se seleccionara la vinculación como acción.
+
+<img src="https://media.giphy.com/media/3og0IILcOw1s1TihDa/giphy.gif" width="50%">
