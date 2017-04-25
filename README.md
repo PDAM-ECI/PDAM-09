@@ -56,6 +56,8 @@ Usando un API de prueba https://jsonplaceholder.typicode.com/ leeremos una lista
 
 <img src="http://gabo.com.co/pdam/lab-9/lab-09-02.png" width="50%">
 
-* 
+* El resultado final debe ser:
+
+<img src="https://media.giphy.com/media/3oKIPkTUOOpugkPWCY/giphy.gif" width="50%">
 
 
