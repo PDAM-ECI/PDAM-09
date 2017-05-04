@@ -150,6 +150,7 @@ Para el almacenamiento de datos locales se pueden usar varias estrategias, sin e
 <img src="http://gabo.com.co/pdam/lab-9/lab-09-08.png" width="50%">
 
 * Seleccione el archivo, el editor se activara en modo de edición de datos. Cree una nueva entidad con el nomnre Item, cree dos atributos en la entidad: 
+
 ** title:String
 ** done:Boolean
 
