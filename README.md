@@ -169,8 +169,6 @@ done:Boolean
 
 <img src="http://gabo.com.co/pdam/lab-9/lab-09-10.png" width="50%">
 
-* El resultado debe ser el siguiente:
+* Ahora ajuste el código para que al cambiar el switch se almacene la propiedad "done" del elemento localmente. El resultado debe ser el siguiente:
 
 <img src="https://media.giphy.com/media/xUPGcorurfiyq3qokE/giphy.gif" width="40%">
-
-* Ahora ajuste el código para que al cambiar el switch, se almacene la propiedad "done" del elemento localmente
