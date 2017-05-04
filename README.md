@@ -64,7 +64,7 @@ Usando un API de prueba https://jsonplaceholder.typicode.com/ leeremos una lista
 
 Para el almacenamiento de datos locales se pueden usar varias estrategias, sin embargo usaremos la estrategia por defecto nativa usando CoreData. Añadiremos una opcion a los tabs para agregar elementos (To do) a una lista y guardarlos localmente.
 
-* Añada un nuevo controlador de navegación y vinculelo como cuarta opción en los tabs este por defecto creara un contorlador de lista (TableViewController). como en puntos anteriores cree una clase para el controlador (PostTableViewController) y otra para la celda de la lista (TodoCell).
+* Añada un nuevo controlador de navegación y vinculelo como cuarta opción en los tabs este por defecto creara un contorlador de lista (TableViewController). como en puntos anteriores cree una clase para el controlador (TodoTableViewController) y otra para la celda de la lista (TodoCell).
 
 * Seleccione el controlador de la vista de lista que acabo de crear haciendo click sobre el icono amarillo en el RootViewController. En el menu principal ubique la opcion "Editor" y seleccione "Embed in" > "Navigation Bar". Esto hará que se duplique el controlador de navegación pero esta vez la vista superior será editable con lo que se podrá añadir la opción de agregar un nuevo elemento.
 
@@ -108,7 +108,7 @@ Para el almacenamiento de datos locales se pueden usar varias estrategias, sin e
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "pdam09")
+        let container = NSPersistentContainer(name: "Model")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -145,13 +145,32 @@ Para el almacenamiento de datos locales se pueden usar varias estrategias, sin e
     }
 ```
 
-* Ahora insertaremos la definición del modelo de datos locales, para esto haga click derecho sobre la capeta del proyecto, y seleccione la opción de añadir archivo nuevo, del menu de opciones seleccione "Data Model" use el nombre "TodoItem" para el nuevo archivo.
+* Ahora insertaremos la definición del modelo de datos locales, para esto haga click derecho sobre la capeta del proyecto, y seleccione la opción de añadir archivo nuevo, del menu de opciones seleccione "Data Model" use el nombre "Model" para el nuevo archivo.
 
 <img src="http://gabo.com.co/pdam/lab-9/lab-09-08.png" width="50%">
 
-* Seleccione el archivo, el editor se activara en modo de edición de datos. Cree una nueva entidad con el nomnre Item, cree dos atributos en la entidad: 
+* Seleccione el archivo, el editor se activara en modo de edición de datos. Cree una nueva entidad con el nombre Item y cree dos atributos en la entidad: 
 
 title:String
+
 done:Boolean
 
-* 
+* Esta entidad esta ahora disponible en la lógica de la aplicación mediante la clase Item autogenerada. Ahora integraremos el almacenamiento local con la acción del boton para almacenar un elemento localmente
+
+* Vincule graficamente el input text a la clase TodoDetailViewController para poder leer el valor que el usuario escriba
+
+* Incluya un elemento "switch" dentro de la celda de referencia 
+
+* Complete con el siguiente codigo para guardar la información localmente
+
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-09.png" width="50%">
+
+* El siguiente paso será leer la información local para mostrarla en un listado, para esto ubique el archivo "TodoTableViewController" y edite el codigo para cargar la información cuando la vista quede activa.
+
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-10.png" width="50%">
+
+* El resultado debe ser el siguiente:
+
+<img src="https://media.giphy.com/media/xUPGcorurfiyq3qokE/giphy.gif" width="50%">
+
+* Ahora ajuste el código para que al cambiar el switch, se almacene la propiedad "done" del elemento localmente
