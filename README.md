@@ -151,7 +151,7 @@ Para el almacenamiento de datos locales se pueden usar varias estrategias, sin e
 
 * Seleccione el archivo, el editor se activara en modo de edición de datos. Cree una nueva entidad con el nomnre Item, cree dos atributos en la entidad: 
 
-** title:String
-** done:Boolean
+title:String
+done:Boolean
 
 * 
