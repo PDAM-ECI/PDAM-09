@@ -82,7 +82,7 @@ Para el almacenamiento de datos locales se pueden usar varias estrategias, sin e
 
 * En la vista de creación inserte un campo de texto y un botón.
 
-<img src="http://gabo.com.co/pdam/lab-9/lab-09-05.png" width="50%">
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-05.png" width="40%">
 
 * Pruebe el funcionamiento de la navegación de la aplicación corriendo el proyecto.
 
@@ -163,11 +163,11 @@ done:Boolean
 
 * Complete con el siguiente codigo para guardar la información localmente
 
-<img src="http://gabo.com.co/pdam/lab-9/lab-09-09.png" width="50%">
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-09.png" width="80%">
 
 * El siguiente paso será leer la información local para mostrarla en un listado, para esto ubique el archivo "TodoTableViewController" y edite el codigo para cargar la información cuando la vista quede activa.
 
-<img src="http://gabo.com.co/pdam/lab-9/lab-09-10.png" width="50%">
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-10.png" width="80%">
 
 * Ahora ajuste el código para que al cambiar el switch se almacene la propiedad "done" del elemento localmente. El resultado debe ser el siguiente:
 
