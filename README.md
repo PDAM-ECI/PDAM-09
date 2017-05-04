@@ -93,3 +93,64 @@ Para el almacenamiento de datos locales se pueden usar varias estrategias, sin e
 * Ahora vincularemos la logica con la acción del botón de guardar, esto se hará usando la vista contextual y teniendo seleccionado el botón se arrastrará hasta la vista en donde se seleccionara la vinculación como acción.
 
 <img src="https://media.giphy.com/media/3og0IILcOw1s1TihDa/giphy.gif" width="50%">
+
+* Ubique el archivo "AppDelegate.swift", importe la libreria CoreData, y al final del archivo incluya el código de inicialización del CoreData que está a continuación:
+
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-07.png" width="50%">
+
+```swift
+    // MARK: - Core Data stack
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        /*
+         The persistent container for the application. This implementation
+         creates and returns a container, having loaded the store for the
+         application to it. This property is optional since there are legitimate
+         error conditions that could cause the creation of the store to fail.
+         */
+        let container = NSPersistentContainer(name: "pdam09")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                
+                /*
+                 Typical reasons for an error here include:
+                 * The parent directory does not exist, cannot be created, or disallows writing.
+                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                 * The device is out of space.
+                 * The store could not be migrated to the current model version.
+                 Check the error message to determine what the actual problem was.
+                 */
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+    
+    // MARK: - Core Data Saving support
+    
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+```
+
+* Ahora insertaremos la definición del modelo de datos locales, para esto haga click derecho sobre la capeta del proyecto, y seleccione la opción de añadir archivo nuevo, del menu de opciones seleccione "Data Model" use el nombre "TodoItem" para el nuevo archivo.
+
+<img src="http://gabo.com.co/pdam/lab-9/lab-09-08.png" width="50%">
+
+* Seleccione el archivo, el editor se activara en modo de edición de datos. Cree una nueva entidad con el nomnre Item, cree dos atributos en la entidad: 
+** title:String
+** done:Boolean
+
+* 
