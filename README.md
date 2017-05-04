@@ -171,6 +171,6 @@ done:Boolean
 
 * El resultado debe ser el siguiente:
 
-<img src="https://media.giphy.com/media/xUPGcorurfiyq3qokE/giphy.gif" width="50%">
+<img src="https://media.giphy.com/media/xUPGcorurfiyq3qokE/giphy.gif" width="40%">
 
 * Ahora ajuste el código para que al cambiar el switch, se almacene la propiedad "done" del elemento localmente
